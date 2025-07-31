@@ -1,7 +1,5 @@
 # Skywings Travel Website ✈️
 
-![Skywings Logo](assets/header.png)
-
 A modern, responsive travel website featuring elegant cursive typography, dark mode, and interactive booking components.
 
 ## Features 🌟
@@ -35,18 +33,31 @@ A modern, responsive travel website featuring elegant cursive typography, dark m
 
 # File Structure 
 skywings-travel/
+
 ├── assets/               # All images and media
+
 ├── css/
+
 │   ├── styles.css        # Main stylesheet
+
 │   └── animations.css    # Animation-specific styles
+
 ├── js/
+
 │   ├── main.js           # Core functionality
+
 │   └── auth.js           # Authentication logic
+
 ├── pages/
+
 │   ├── book.html         # Booking page
+
 │   ├── checklist.html    # Packing checklist
+
 │   └── login.html        # Auth page
+
 ├── index.html            # Main page
+
 └── README.md
 
 # Browser Support 🌐
