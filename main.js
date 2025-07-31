@@ -74,3 +74,53 @@ const swiper = new Swiper(".swiper", {
   spaceBetween: 20,
   loop: true,
 });
+// Back to top button
+const backToTop = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.add('show');
+  } else {
+    backToTop.classList.remove('show');
+  }
+});
+
+// Dark/Light mode toggle
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = themeToggle.querySelector('i');
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  
+  if (document.body.classList.contains('dark-mode')) {
+    themeIcon.className = 'ri-sun-line';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    themeIcon.className = 'ri-moon-line';
+    localStorage.setItem('theme', 'light');
+  }
+});
+
+// Check saved theme
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-mode');
+  themeIcon.className = 'ri-sun-line';
+}
+
+ // Progress calculation
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const progressFill = document.getElementById('progress-fill');
+    const progressText = document.querySelector('.progress-text');
+    
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', updateProgress);
+    });
+    
+    function updateProgress() {
+      const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+      const total = checkboxes.length;
+      const percent = Math.round((checked / total) * 100);
+      
+      progressFill.style.width = `${percent}%`;
+      progressText.textContent = `${percent}% Complete`;
+    }

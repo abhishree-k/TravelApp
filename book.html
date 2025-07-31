@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Book Trip | SKYWINGS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | SKYWINGS</title>
+  </head>
+<body>
+  <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#" class="logo">Skywings</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html">ABOUT</a></li>
+        <li><a href="index.html">TOUR</a></li>
+        <li><a href="index.html">PACKAGE</a></li>
+        <li><a href="index.html">CONTACT</a></li>
+        <li><a href="checklist.html">CHECKLIST</a></li>
+        <li><a href="book.html">BOOK TRIP</a></li>
+      </ul>
+      <div class="nav__btns">
+        <button class="btn">BOOK TRIP</button>
+        <button id="theme-toggle" class="theme-toggle">
+          <i class="ri-moon-line"></i>
+        </button>
+      </div>
+    </nav>
+
+  <section class="section__container" style="min-height: 80vh;">
+    <h2 class="section__header">Book Your Trip</h2>
+    <div class="booking-form">
+      <form id="booking-form">
+        <div class="form-group">
+          <label>Destination</label>
+          <select required>
+            <option value="">Select Destination</option>
+           <option>Amsterdam, Netherlands</option>
+           <option>Bali, Indonesia</option>
+           <option>Bangkok, Thailand</option>
+           <option>Barcelona, Spain</option>
+           <option>Buenos Aires, Argentina</option>
+           <option>Dubai, UAE</option>
+           <option>Hanoi, Vietnam</option>
+           <option>Hong Kong</option>
+           <option>Lisbon, Portugal</option>
+           <option>London, UK</option>
+           <option>Los Angeles, USA</option>
+           <option>Mexico City, Mexico</option>
+           <option>New Delhi, India</option>
+           <option>New York City, USA</option>
+           <option>Paris, France</option>
+           <option>Prague, Czech Republic</option>
+           <option>Rio de Janeiro, Brazil</option>
+           <option>Rome, Italy</option>
+           <option>Seoul, South Korea</option>
+           <option>Singapore</option>
+           <option>Sydney, Australia</option>
+           <option>Tokyo, Japan</option>
+           <option>Toronto, Canada</option>
+           <option>Vienna, Austria</option>
+          </select>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>Departure Date</label>
+            <input type="date" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Return Date</label>
+            <input type="date" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>Adults</label>
+            <input type="number" min="1" value="1" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Children</label>
+            <input type="number" min="0" value="0">
+          </div>
+        </div>
+        
+        <button type="submit" class="btn">Complete Booking</button>
+      </form>
+    </div>
+  </section>
+  
+  <footer id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#" class="logo">Skywings</a>
+          </div>
+          <p>
+            Explore the world with ease and excitement through our comprehensive
+            travel platform. Your journey begins here, where seamless planning
+            meets unforgettable experiences.
+          </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-line"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Hotels</a></li>
+            <li><a href="#">Cruise</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="#">
+                <span><i class="ri-phone-fill"></i></span> +91 9876543210
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-record-mail-line"></i></span> info@skywings
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-map-pin-2-fill"></i></span> New Delhi, India
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Subscribe</h4>
+          <form action="/">
+            <input type="text" placeholder="Enter your email" />
+            <button class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 Web Design Mastery. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
