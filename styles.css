@@ -911,6 +911,185 @@ body.dark-mode footer {
 }
 
 /* Checklist Styles */
+.auth-container {
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .auth-form {
+      background: var(--extra-light);
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .dark-mode .auth-form {
+      background: #1e293b;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .auth-form h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+      font-size: 1.8rem;
+    }
+
+    .dark-mode .auth-form h2 {
+      color: var(--text-dark);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .dark-mode label {
+      color: var(--text-dark);
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 1rem;
+      background-color: var(--white);
+      color: var(--text-dark);
+      transition: all 0.3s;
+    }
+
+    .dark-mode input {
+      background-color: #334155;
+      border-color: #475569;
+      color: var(--text-dark);
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(40, 135, 255, 0.2);
+    }
+
+    .dark-mode input:focus {
+      box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.3);
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      outline: none;
+      border: none;
+      font-size: 1rem;
+      white-space: nowrap;
+      color: var(--white);
+      background-color: var(--primary-color);
+      border-radius: 5rem;
+      transition: 0.3s;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-color-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(40, 135, 255, 0.3);
+    }
+
+    .dark-mode .btn:hover {
+      box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+    }
+
+    .auth-toggle {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: var(--text-light);
+    }
+
+    .dark-mode .auth-toggle {
+      color: var(--text-light);
+    }
+
+    .auth-toggle a {
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .auth-toggle a:hover {
+      text-decoration: underline;
+    }
+
+    .theme-toggle-container {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    /* Decorative elements */
+    .decoration {
+      position: absolute;
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .plane-1 {
+      top: 20%;
+      left: 10%;
+      font-size: 3rem;
+      transform: rotate(-20deg);
+    }
+
+    .plane-2 {
+      bottom: 20%;
+      right: 10%;
+      font-size: 4rem;
+      transform: rotate(15deg);
+    }
+
+    .cloud {
+      position: absolute;
+      font-size: 8rem;
+      z-index: -1;
+      opacity: 0.05;
+    }
+
+    .cloud-1 {
+      top: 10%;
+      right: 5%;
+    }
+
+    .cloud-2 {
+      bottom: 10%;
+      left: 5%;
+    }
+
+    @media (max-width: 768px) {
+      .section__container {
+        padding: 2rem 1rem;
+      }
+      
+      .auth-form {
+        padding: 1.5rem;
+      }
+      
+      .logo {
+        font-size: 2.2rem;
+      }
+      
+      .decoration {
+        display: none;
+      }
+    }
+
 .progress-container {
       max-width: 600px;
       margin: 2rem auto;
@@ -990,3 +1169,32 @@ body.dark-mode footer {
   .dark-mode .progress-container {
     color: var(--text-light);
   }
+
+  /*login stlying*/
+
+  .auth-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .auth-form {
+      background: var(--extra-light);
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    
+    .auth-form h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .auth-toggle {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    
+    .auth-toggle a {
+      color: var(--primary-color);
+      font-weight: 600;
+    }

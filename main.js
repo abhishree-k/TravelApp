@@ -124,3 +124,70 @@ if (localStorage.getItem('theme') === 'dark') {
       progressFill.style.width = `${percent}%`;
       progressText.textContent = `${percent}% Complete`;
     }
+
+    // Update navigation based on login state
+function updateNavigation() {
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  const userEmail = localStorage.getItem('userEmail');
+  
+  const navLinks = document.getElementById('nav-links');
+  const navBtns = document.querySelector('.nav__btns');
+  
+  if (isLoggedIn) {
+    // Add profile link
+    const profileItem = document.createElement('li');
+    profileItem.innerHTML = `<a href="#"><i class="ri-user-line"></i> ${userEmail}</a>`;
+    navLinks.insertBefore(profileItem, navLinks.children[navLinks.children.length - 1]);
+    
+    // Change button to logout
+    navBtns.innerHTML = `<button class="btn" id="logout-btn">Logout</button>`;
+    
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('userEmail');
+      location.reload();
+    });
+  }
+}
+
+updateNavigation();
+
+    // Toggle between login/register forms
+    document.getElementById('show-register').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('register-form').style.display = 'block';
+    });
+    
+    document.getElementById('show-login').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('register-form').style.display = 'none';
+      document.getElementById('login-form').style.display = 'block';
+    });
+    
+    // Form submission handling
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('isLoggedIn', 'true');
+      alert('Login successful! Redirecting...');
+      window.location.href = 'index.html';
+    });
+    
+    document.getElementById('registerForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('register-email').value;
+      const password = document.getElementById('register-password').value;
+      const confirmPassword = document.getElementById('register-confirm').value;
+      
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+      
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('isLoggedIn', 'true');
+      alert('Registration successful! Redirecting...');
+      window.location.href = 'index.html';
+    });
