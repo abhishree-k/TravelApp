@@ -968,4 +968,25 @@ body.dark-mode footer {
     }
   }
   
-
+.dark-mode .checklist-category {
+    background: #1e293b;
+  }
+  
+  .dark-mode .checklist-category h3 {
+    color: var(--text-light);
+  }
+  
+  .dark-mode .checklist-category li {
+    color: var(--text-light);
+  }
+  
+  .dark-mode .progress-bar {
+    background: #334155;
+  }
+  
+  .dark-mode .progress-fill {
+    background: var(--primary-color);
+  }
+  .dark-mode .progress-container {
+    color: var(--text-light);
+  }
